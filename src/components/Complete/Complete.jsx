@@ -1,24 +1,23 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { TaskContext } from '../../context/context';
 import Task from '../Task/Task'
 
-function Complete({complete,toogleComplete,deleteTask,editTask}) {
+function Complete() {
+    const {tasks} = useContext(TaskContext);
 
-    let completedData = complete.filter((task)=>task.complete === true)
-    let completedCount = completedData.length
-
+    let completeTask = tasks.filter((task)=>task.complete === true)
+  
     return (
-        <div className="text-white">
-            <h2 className="my-4">Completed - {completedCount}</h2>
-            <div className="all-task">
-                   {
-                       completedCount > 0 ? 
-                       completedData.map((task)=>
-                        <Task key={task.id} data={task} toogleComplete={toogleComplete} editTask={editTask} deleteTask={deleteTask}/>
-                       ) :
-                       <p className="text-center">No Complete Data</p>
-                    }
-            </div>
-        </div>
+      <div className="text-white">
+              <h2  className="my-4">Completed - {completeTask.length}</h2>
+              <div className="all-task">
+              { completeTask.length > 0 ?
+                        completeTask.map((task)=> <Task key={task.id} task={task}/> ) :   
+                        <p className="text-center">No Complete Task</p> 
+              }
+               
+              </div>
+      </div>
     )
 }
 
