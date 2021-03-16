@@ -1,0 +1,9 @@
+.flexContainer{
+    display: flex;
+}
+.btn-add{
+    background-color: deeppink;
+    width: 100px;
+    padding: 0.25rem 1rem;
+    margin-left: 10px;
+}

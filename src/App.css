@@ -1,0 +1,10 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.body{
+  background-color: #282846;
+  min-height: 100vh;
+}
+

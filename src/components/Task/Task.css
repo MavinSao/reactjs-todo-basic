@@ -1,0 +1,17 @@
+.task{
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #1a1a33;
+    margin-top: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item{
+    flex-basis: 80%;
+}
+.action{
+    flex-basis: 20%;
+}
+
+
